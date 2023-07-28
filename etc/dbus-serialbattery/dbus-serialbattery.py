@@ -38,6 +38,8 @@ if "MNB" in utils.BMS_TYPE:
     from bms.mnb import MNB
 if "Sinowealth" in utils.BMS_TYPE:
     from bms.sinowealth import Sinowealth
+if "LltJbd_Sfk" in utils.BMS_TYPE:
+    from bms.lltjbd_sfk import LltJbd_Sfk
 
 supported_bms_types = [
     {"bms": Daly, "baud": 9600, "address": b"\x40"},
@@ -60,6 +62,8 @@ if "MNB" in utils.BMS_TYPE:
     supported_bms_types.append({"bms": MNB, "baud": 9600})
 if "Sinowealth" in utils.BMS_TYPE:
     supported_bms_types.append({"bms": Sinowealth, "baud": 9600})
+if "LltJbd_Sfk" in utils.BMS_TYPE:
+    supported_bms_types.append({"bms": LltJbd_Sfk, "baud": 9600})
 
 expected_bms_types = [
     battery_type
